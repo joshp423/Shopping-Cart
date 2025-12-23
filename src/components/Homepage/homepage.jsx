@@ -1,6 +1,5 @@
 import NavBar from "../Navbar/navBar";
-
-
+import storeImage from '../../assets/sleek-and-modern-storefront-design-black-aluminum-glass-front-view-3d-rendered-illustration_9863077.png'
 function Homepage() {
   return (
     <>
@@ -10,7 +9,7 @@ function Homepage() {
       </div>
 
       <div className="hpImage">
-        <img src="" alt="shop-image" />
+        <img src={storeImage} alt="shop-image" />
       </div>
 
       <div className="hpAbout">
