@@ -1,28 +1,22 @@
-import { Link } from "react-router";
+import { Link } from 'react-router';
+import './navBar.css';
 
-function NavBar({cartItems}) {
-    return (
-        <div
-            className="navBar"
-        >
-            <h1>Josh's Shop</h1>
-            <div
-                className="navLinks"
-            >
-                <Link to="/">Home</Link>
-                <Link to="/shop">Shop</Link>
-                <div className="navCart">
-                    <Link to="/cart">
-                        <h3>Your Cart</h3>
-                        <h3>{cartItems}</h3>
-                    </Link>
-
-                </div>
-
-            </div>
-            
+function NavBar({ cartItems }) {
+  return (
+    <div className="navBar">
+      <h1><Link to="/">Josh's Shop</Link></h1>
+      <div className="navLinks">
+        <h3><Link to="/">Home</Link></h3>
+        <h3><Link to="/shop">Shop</Link></h3>
+        <div className="navCart">
+          
+            <h3><Link to="/cart">Your Cart</Link></h3>
+            <h3><Link to="/cart">{cartItems}</Link></h3>
+          
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default NavBar
+export default NavBar;
