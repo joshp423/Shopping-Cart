@@ -5,8 +5,11 @@ import ErrorPage from './components/ErrorPage/errorPage';
 const routes = [
   {
     path: '/',
-    element: <Homepage />,
+    element: <App />,
     errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <Homepage /> }
+    ]
   },
   {
     path: 'Cart',
