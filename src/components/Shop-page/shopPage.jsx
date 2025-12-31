@@ -1,10 +1,17 @@
-import ProductTile from "./Product-Tile/productTile"
+import ProductTile from './Product-Tile/productTile';
+import { useOutletContext } from 'react-router-dom';
 
 function ShopPage() {
-    return(
-        <div className="shopPage">
-            <ProductTile></ProductTile>
+  const { products } = useOutletContext();
 
-        </div>
-    )
+  if (!products) return <p>Loading Products</p>;
+  return (
+    <div className="shopPage">
+      {products.map((item) => (
+        <ProductTile key={item.id} product={item} />
+      ))}
+    </div>
+  );
 }
+
+export default ShopPage;

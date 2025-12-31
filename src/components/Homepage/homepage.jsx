@@ -1,9 +1,8 @@
-import NavBar from "../Navbar/navBar";
-import storeImage from '../../assets/sleek-and-modern-storefront-design-black-aluminum-glass-front-view-3d-rendered-illustration_9863077.png'
+import NavBar from '../Navbar/navBar';
+import storeImage from '../../assets/sleek-and-modern-storefront-design-black-aluminum-glass-front-view-3d-rendered-illustration_9863077.png';
 function Homepage() {
   return (
     <>
-    <NavBar></NavBar>
       <div className="hpTitle">
         <h1>Welcome to Josh's Shop!</h1>
       </div>
@@ -17,7 +16,8 @@ function Homepage() {
         <p>
           Bre's really really asleep, order from the store now or she will wake
           up and be extremely upset! I'm serious order now or I'll ship Liam's
-          farts to your door. Fuck around and find out. Dr Dreas you are nervous!!!
+          farts to your door. Fuck around and find out. Dr Dreas you are
+          nervous!!!
         </p>
       </div>
     </>

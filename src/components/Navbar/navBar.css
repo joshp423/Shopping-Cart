@@ -1,29 +1,30 @@
 .navBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: solid 2px grey;
-    padding: 0px 10px 5px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: solid 2px grey;
+  padding: 0px 10px 5px 10px;
 }
 
 .navLinks {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
 }
 
 .navCart {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
-h1, h3 {
-    margin: 0;
+h1,
+h3 {
+  margin: 0;
 }
 
 h1 {
-    font-size: 42px;
+  font-size: 42px;
 }

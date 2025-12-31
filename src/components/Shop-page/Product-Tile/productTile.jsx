@@ -12,10 +12,10 @@ function ProductTile({ product }) {
       <div className="productDesc">
         <p>{product.description}</p>
         <p>Rating: {product.rating.rate} stars</p>
-        <p>/{product.rating.count}</p>
+        <p>{product.rating.count} - reviews </p>
       </div>
 
-      <ProductTileButtons></ProductTileButtons>
+      <ProductTileButtons product={product} />
     </div>
   );
 }
