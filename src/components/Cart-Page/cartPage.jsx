@@ -9,7 +9,6 @@ function CartPage() {
       <h1>Cart</h1>
       {Array.from(cart.values()).map(item => (
         <CartProductTile
-          key={item.product.id}
           cartItem={item}
           setCart={setCart}
         />
