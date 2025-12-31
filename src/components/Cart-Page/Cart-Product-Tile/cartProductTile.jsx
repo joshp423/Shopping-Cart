@@ -1,16 +1,16 @@
 import { useOutletContext } from 'react-router';
 
-function CartProductTile({ cartItem, index }) {
-//   const { setCart } = useOutletContext();
+function CartProductTile({ cartItem, key  }) {
 
   return (
-    <div className="cartProductTile" id={index}>
-      <img src={cartItem.image} alt={cartItem.title} />
+    <div className="cartProductTile" id={key}>
+      <img src={cartItem.product.image} alt={cartItem.product.title} />
       <div className="productTitlePrice">
-        <h2>{cartItem.title}</h2>
-        <h3>${cartItem.price}</h3>
+        <h2>{cartItem.product.title}</h2>
+        <h3>${cartItem.product.price}</h3>
       </div>
-      <input type="number" defaultValue={cartItem.quantity} />
+      <h3>Amount in Cart:</h3>
+      <input type="number" defaultValue={cartItem.amount} />
     </div>
   );
 }
