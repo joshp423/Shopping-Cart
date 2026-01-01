@@ -1,5 +1,6 @@
 import ProductTile from './Product-Tile/productTile';
 import { useOutletContext } from 'react-router-dom';
+import './shopPage.css';
 
 function ShopPage() {
   const { products } = useOutletContext();

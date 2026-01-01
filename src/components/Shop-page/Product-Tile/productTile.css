@@ -1,0 +1,16 @@
+.productTile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productTile>img {
+    width: 20%;
+    height: auto;
+}
+
+.productTitlePrice {
+    display: flex;
+    align-items: center;
+    
+}

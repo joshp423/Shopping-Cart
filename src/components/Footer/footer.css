@@ -1,0 +1,10 @@
+.footer {
+    border-top: solid 2px grey;;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+    font-weight: 600;
+}

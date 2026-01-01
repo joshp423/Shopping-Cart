@@ -24,9 +24,7 @@ function NavBar({cart}) {
           <h3>
             <Link to="/cart">Your Cart</Link>
           </h3>
-          <h3>
-            <Link to="/cart">{cartItems}</Link>
-          </h3>
+          <h3 id='cartItems'>{cartItems}</h3>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
-import { Link } from 'react-router';
+import './footer.css'
 
 function Footer() {
   return (
     <div className="footer">
-      <h3>Footer Placeholder</h3>
+      <h3>Designed by Josh</h3>
     </div>
   );
 }

@@ -20,13 +20,11 @@ function DynamicButtonSection({ product }) {
             const newCart = new Map(cart);
             newCart.delete(product.id);
             setCart(newCart);
-            console.log(newCart);
           }
           else {
             const newCart = new Map(cart);
             newCart.set(product.id,{product, amount:e.target.value});
             setCart(newCart);
-            console.log(newCart);
           }
         }
       } />
@@ -36,7 +34,6 @@ function DynamicButtonSection({ product }) {
             const newCart = new Map(cart);
             newCart.delete(product.id);
             setCart(newCart);
-            console.log(newCart);
           }
         }
       >
@@ -49,7 +46,6 @@ function DynamicButtonSection({ product }) {
         const newCart = new Map(cart);
         newCart.set(product.id,{product, amount:1});
         setCart(newCart);
-        console.log(newCart);
       }}
     >
       Add to Cart

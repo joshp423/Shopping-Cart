@@ -4,13 +4,15 @@
   justify-content: space-between;
   align-items: flex-end;
   border-bottom: solid 2px grey;
-  padding: 0px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
+  font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+  font-weight: 600;
 }
 
 .navLinks {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
 }
 
@@ -20,11 +22,20 @@
   gap: 10px;
 }
 
-h1,
-h3 {
-  margin: 0;
+
+.navBar>h1 {
+  font-size: 42px;
 }
 
-h1 {
-  font-size: 42px;
+a {
+  color: black;
+}
+
+a:hover {
+  color: rgb(165, 3, 3);
+}
+
+#cartItems {
+  font-size: 12px;
+  translate: -10px;
 }

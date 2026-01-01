@@ -21,7 +21,6 @@ function CartProductTile({ cartItem  }) {
               const newCart = new Map(cart);
               newCart.set(cartItem.product.id,{product, amount:e.target.value});
               setCart(newCart);
-              console.log(newCart);
             }
         }
       />
@@ -31,7 +30,6 @@ function CartProductTile({ cartItem  }) {
             const newCart = new Map(cart);
             newCart.delete(product.id);
             setCart(newCart);
-            console.log(newCart);
           }
         }
       >

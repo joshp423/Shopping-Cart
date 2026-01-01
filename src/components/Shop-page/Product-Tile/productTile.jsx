@@ -1,4 +1,5 @@
 import ProductTileButtons from './productTileButtons';
+import './productTile.css';
 
 function ProductTile({ product }) {
   return (
@@ -11,8 +12,7 @@ function ProductTile({ product }) {
 
       <div className="productDesc">
         <p>{product.description}</p>
-        <p>Rating: {product.rating.rate} stars</p>
-        <p>{product.rating.count} - reviews </p>
+        <p>Rating: {product.rating.rate}/5 - {product.rating.count} reviews </p>
       </div>
 
       <ProductTileButtons product={product} />
