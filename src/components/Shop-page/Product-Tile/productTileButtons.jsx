@@ -36,6 +36,7 @@ function DynamicButtonSection({ product }) {
             setCart(newCart);
           }
         }
+        className='productRFCButton'
       >
         Remove from cart
       </button>

@@ -7,6 +7,9 @@
   padding: 5px 10px 5px 10px;
   font-family: 'Nimbus Mono PS', 'Courier New', monospace;
   font-weight: 600;
+  max-height: 50px;
+  background-color: black;
+  box-shadow: 0px 2px 2px rgb(135, 135, 135);
 }
 
 .navLinks {
@@ -22,13 +25,20 @@
   gap: 10px;
 }
 
-
 .navBar>h1 {
   font-size: 42px;
 }
 
-a {
-  color: black;
+a, .navCart>h3 {
+  color: white;
+}
+
+.navLinks>h3 {
+  color: white;
+}
+
+.navBar>a {
+  color: white;
 }
 
 a:hover {

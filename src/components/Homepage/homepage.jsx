@@ -2,7 +2,7 @@ import NavBar from '../Navbar/navBar';
 import storeImage from '../../assets/sleek-and-modern-storefront-design-black-aluminum-glass-front-view-3d-rendered-illustration_9863077.png';
 function Homepage() {
   return (
-    <>
+    <div className='homePage'>
       <div className="hpTitle">
         <h1>Welcome to Josh's Shop!</h1>
       </div>
@@ -20,7 +20,7 @@ function Homepage() {
           nervous!!!
         </p>
       </div>
-    </>
+    </div>
   );
 }
 
