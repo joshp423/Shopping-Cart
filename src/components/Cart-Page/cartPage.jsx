@@ -8,11 +8,8 @@ function CartPage() {
   return cart.size ? (
     <div className="cartPage">
       <h1>Your Cart</h1>
-      {Array.from(cart.values()).map(item => (
-        <CartProductTile
-          cartItem={item}
-          setCart={setCart}
-        />
+      {Array.from(cart.values()).map((item) => (
+        <CartProductTile cartItem={item} setCart={setCart} />
       ))}
     </div>
   ) : (

@@ -25,19 +25,20 @@
   gap: 10px;
 }
 
-.navBar>h1 {
+.navBar > h1 {
   font-size: 42px;
 }
 
-a, .navCart>h3 {
+a,
+.navCart > h3 {
   color: white;
 }
 
-.navLinks>h3 {
+.navLinks > h3 {
   color: white;
 }
 
-.navBar>a {
+.navBar > a {
   color: white;
 }
 

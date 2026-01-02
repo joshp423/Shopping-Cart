@@ -1,4 +1,4 @@
 .shopPage {
-    display: grid;
-    grid-template-rows: repeat(10, auto)
+  display: grid;
+  grid-template-rows: repeat(10, auto);
 }

@@ -5,7 +5,7 @@ function ProductTile({ product }) {
   return (
     <div className="productTile" id={product.id}>
       <img src={product.image} alt={product.title} />
-      <div className='productTileRightSide'>
+      <div className="productTileRightSide">
         <div className="productTitlePrice">
           <h2>{product.title}</h2>
           <h2>${product.price}</h2>
@@ -13,7 +13,10 @@ function ProductTile({ product }) {
 
         <div className="productDesc">
           <p>{product.description}</p>
-          <p>Rating: {product.rating.rate}/5 - {product.rating.count} reviews </p>
+          <p>
+            Rating: {product.rating.rate}/5 - {product.rating.count}{' '}
+            reviews{' '}
+          </p>
         </div>
 
         <ProductTileButtons product={product} />

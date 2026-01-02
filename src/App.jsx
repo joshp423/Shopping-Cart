@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <>
-      <NavBar cart= {cart} />
+      <NavBar cart={cart} />
       <Outlet context={{ products, cart, setCart }} />
       <Footer />
     </>

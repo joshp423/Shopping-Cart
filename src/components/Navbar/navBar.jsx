@@ -1,13 +1,12 @@
 import { Link } from 'react-router';
 import './navBar.css';
 
-function NavBar({cart}) {
-
+function NavBar({ cart }) {
   let cartItems;
   if (cart) {
     cartItems = cart.size;
   }
-  
+
   return (
     <div className="navBar">
       <h1>
@@ -24,7 +23,7 @@ function NavBar({cart}) {
           <h3>
             <Link to="/cart">Your Cart</Link>
           </h3>
-          <h3 id='cartItems'>{cartItems}</h3>
+          <h3 id="cartItems">{cartItems}</h3>
         </div>
       </div>
     </div>
