@@ -57,14 +57,15 @@
 .productATCButton {
     transition: transform 250ms;
 }
+
 .productATCButton:hover {
     transition: transform 500ms, opacity 500ms, filter 500ms;
-    transform: scale(1.2)rotate(360deg);
+    transform: scale(1.1);
     background-color: green;
     color: white;
 }
 
 .productATCButton:active {
     transition: transform 100ms, opacity 100ms, filter 100ms;
-    transform: scale(1.5) rotate(360deg);
+    transform: scale(1.3);
 }
