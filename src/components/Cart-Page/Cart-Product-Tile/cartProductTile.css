@@ -4,8 +4,9 @@
     border-top: 2px solid grey;
     margin: 10px 20px 10px 20px;
     gap: 30px;
-    transition: opacity 0.5s ease-out, transform 125ms;
-
+    transform: scale(1, 1);
+    filter: brightness(100%);
+    overflow: hidden;
 }
 
 .cartProductTile>img {
@@ -42,6 +43,9 @@
     color: white;
 }
 
-.cartProductTile.removing  {
-    transform: translateX(-500px);
+.cartProductTile.removing {
+    transition: transform 500ms, opacity 500ms, filter 500ms;
+    transform: translateX(-2000px);
+    filter: brightness(120%);
+    opacity: 0;    
 }

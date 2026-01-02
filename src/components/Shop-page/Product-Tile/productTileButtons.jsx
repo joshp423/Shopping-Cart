@@ -44,10 +44,13 @@ function DynamicButtonSection({ product }) {
   ) : ( 
     <button
       onClick={() => {
-        const newCart = new Map(cart);
-        newCart.set(product.id,{product, amount:1});
-        setCart(newCart);
+        setTimeout(() => {
+          const newCart = new Map(cart);
+          newCart.set(product.id,{product, amount:1});
+          setCart(newCart);
+        }, 100)
       }}
+      className='productATCButton'
     >
       Add to Cart
     </button>

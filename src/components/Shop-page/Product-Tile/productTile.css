@@ -53,3 +53,18 @@
     background-color: rgb(165, 3, 3);
     color: white;
 }
+
+.productATCButton {
+    transition: transform 250ms;
+}
+.productATCButton:hover {
+    transition: transform 500ms, opacity 500ms, filter 500ms;
+    transform: scale(1.2)rotate(360deg);
+    background-color: green;
+    color: white;
+}
+
+.productATCButton:active {
+    transition: transform 100ms, opacity 100ms, filter 100ms;
+    transform: scale(1.5) rotate(360deg);
+}
