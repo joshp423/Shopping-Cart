@@ -3,7 +3,7 @@ import './productTile.css';
 
 function ProductTile({ product }) {
   return (
-    <div className="productTile" id={product.id}>
+    <div className="productTile" data-testid="product-tile" id={product.id}>
       <img src={product.image} alt={product.title} />
       <div className="productTileRightSide">
         <div className="productTitlePrice">

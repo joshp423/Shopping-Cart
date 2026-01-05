@@ -1,9 +1,24 @@
-//test that there are 20 product tiles
+import { describe, test, expect, vi } from 'vitest';
+import { render, screen } from '@testing-library/react';
 
-//test that the first tile is displaying the data correctly
+//mock what comes back from react router dom by mocking the whole thing
+vi.mock('react-router-dom', async () => {
+  const actual = await vi.importActual('react-router-dom');
+  return {
+    ...actual,
+    useOutletContext: vi.fn(),
+  };
+});
 
-//test that add to cart button works and that buttons change after
+import ShopPage from '../src/components/Shop-page/shopPage';
 
-//test that rfc button works and buttons change after
+//test that product tiles are displaying accurately - amount
+describe('productPage', () => {
+    test('dom is rendering products correctly', () => {
 
-//test that input works
+        render(<ShopPage />);
+
+        const tiles = screen.getElementByTestID('product-tile');
+        expect(tiles).toHaveLength(2);
+    })
+})

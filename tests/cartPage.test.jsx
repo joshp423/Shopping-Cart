@@ -2,7 +2,6 @@ import { describe, test, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { useOutletContext } from 'react-router-dom';
 
-
 vi.mock('../src/components/Cart-Page/Cart-Product-Tile/cartProductTile', () => ({
   default: ({ cartItem }) => (
     <div data-testid="cart-product-tile">{cartItem.product.title}</div>
@@ -18,14 +17,11 @@ vi.mock('react-router-dom', async () => {
   };
 });
 
-//test tiles render correctly with two products in the cart
-
 import CartPage from '../src/components/Cart-Page/cartPage';
 
-//render default simplified productTile for test to count
 describe('cartPage', () => {
-
-  test('renders two cart product tiles when the cart has two items', () => {
+  //test tiles render correctly with two products in the cart
+  test('dom is updating accurately from cart', () => {
     const mockCart = new Map([
         [1, { product: { id: 1, title: 'Product 1', image: 'img1.jpg' }, amount: 1 }],
         [2, { product: { id: 2, title: 'Product 2', image: 'img2.jpg' }, amount: 1 }],
@@ -48,6 +44,3 @@ describe('cartPage', () => {
     expect(tiles).toHaveLength(2);
   });
 });
-
-
-//test that remove from cart button works
