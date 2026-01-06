@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import './navBar.css';
 
 function NavBar({ cart }) {
@@ -23,7 +23,9 @@ function NavBar({ cart }) {
           <h3>
             <Link to="/cart">Your Cart</Link>
           </h3>
-          <h3 id="cartItems">{cartItems}</h3>
+          <h3 id="cartItems" data-testid="navCartItems">
+            {cartItems}
+          </h3>
         </div>
       </div>
     </div>
