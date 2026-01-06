@@ -7,6 +7,7 @@ function DynamicButtonSection({ product }) {
   return cartProduct ? (
     <>
       <input
+        data-testid="productQuantityInput"
         type="number"
         value={cartProduct.amount}
         min="1"

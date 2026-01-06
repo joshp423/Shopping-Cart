@@ -1,4 +1,4 @@
-import { describe, test, expect, vi} from 'vitest';
+import { describe, test, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { useOutletContext } from 'react-router-dom';
 
@@ -14,10 +14,8 @@ vi.mock('react-router-dom', async () => {
 //test that quantity field updates update the map
 describe('Cart Map', () => {
   test('CartProductTile input updates cart map', async () => {
-
-    const { default: CartProductTile } = await import(
-      '../src/components/Cart-Page/Cart-Product-Tile/cartProductTile'
-    );
+    const { default: CartProductTile } =
+      await import('../src/components/Cart-Page/Cart-Product-Tile/cartProductTile');
 
     const mockSetCart = vi.fn(); //creates a mock function for passing to setCart
 
@@ -28,10 +26,11 @@ describe('Cart Map', () => {
       price: 10,
       image: 'test.jpg',
     };
-    
-    const cartItem = { //create fake map product to match
-        product,
-        amount: 1,
+
+    const cartItem = {
+      //create fake map product to match
+      product,
+      amount: 1,
     };
 
     const cart = new Map([[product.id, cartItem]]); // creates new cart map with fake products
@@ -45,22 +44,20 @@ describe('Cart Map', () => {
 
     const quantityInput = screen.getByTestId('quantityInput');
 
-    fireEvent.change(quantityInput, { target: { value: '3' } });//make the fake input change to value 3
+    fireEvent.change(quantityInput, { target: { value: '3' } }); //make the fake input change to value 3
 
     const updatedCart = mockSetCart.mock.calls[0][0]; //grab the map passed to mockSetCart
 
-    expect(updatedCart).toBeInstanceOf(Map);//check it is a map
+    expect(updatedCart).toBeInstanceOf(Map); //check it is a map
 
-    expect(updatedCart.get(product.id).amount).toBe("3");//check amount was updated to 3
+    expect(updatedCart.get(product.id).amount).toBe('3'); //check amount was updated to 3
   });
 
   test('Remove from cart button removes item from map', async () => {
-
     vi.useFakeTimers();
 
-    const { default: CartProductTile } = await import(
-      '../src/components/Cart-Page/Cart-Product-Tile/cartProductTile'
-    );
+    const { default: CartProductTile } =
+      await import('../src/components/Cart-Page/Cart-Product-Tile/cartProductTile');
 
     const mockSetCart = vi.fn(); //creates a mock function for passing to setCart
 
@@ -71,10 +68,11 @@ describe('Cart Map', () => {
       price: 10,
       image: 'test.jpg',
     };
-    
-    const cartItem = { //create fake map product to match
-        product,
-        amount: 1,
+
+    const cartItem = {
+      //create fake map product to match
+      product,
+      amount: 1,
     };
 
     const cart = new Map([[product.id, cartItem]]); // creates new cart map with fake products
@@ -86,21 +84,20 @@ describe('Cart Map', () => {
 
     render(<CartProductTile cartItem={cartItem} />); //render fake DOM so button exists
 
-    const removeButton = screen.getByRole('button', {name: /remove from cart/i,});
+    const removeButton = screen.getByRole('button', {
+      name: /remove from cart/i,
+    });
 
     fireEvent.click(removeButton); //click the button
 
-    vi.advanceTimersByTime(500)//because of timer advance time
+    vi.advanceTimersByTime(500); //because of timer advance time
 
     const updatedCart = mockSetCart.mock.calls[0][0]; //grab the map passed to mockSetCart
 
-    expect(updatedCart).toBeInstanceOf(Map);//check it is a map
+    expect(updatedCart).toBeInstanceOf(Map); //check it is a map
 
     expect(updatedCart.has(product.id)).toBe(false); //check product is removed
 
     vi.useRealTimers();
-  })
+  });
 });
-
-
-
