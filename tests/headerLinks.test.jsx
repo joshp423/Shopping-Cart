@@ -4,7 +4,6 @@ import { MemoryRouter } from 'react-router-dom';
 import NavBar from '../src/components/Navbar/navBar';
 
 describe('NavBar', () => {
-
   const product = {
     id: '1',
     title: 'Test Product',

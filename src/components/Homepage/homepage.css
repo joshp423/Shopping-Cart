@@ -1,0 +1,25 @@
+.homePage {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.hpTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hpImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hpImage > img {
+  width: 100%;
+  height: auto;
+}
+
+.hpAbout {
+    margin: 0px 20px 0px 20px
+}
